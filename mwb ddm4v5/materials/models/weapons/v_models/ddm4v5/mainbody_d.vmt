@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\v_models\ddm4v5\mainbody_d"
+	"$bumpmap" "models\weapons\v_models\ddm4v5\mainbody_n"
+	"$phongexponenttexture" "models\weapons\v_models\ddm4v5\mainbody_s"
+	"$normalmapalphaenvmapmask" "1" // add phong mask alpha channel additionally
+	"$nocull" "1" // Important for fighting Z stuff
+	"$color2" "[ .8 .8 .8 ]" // You can set .7, .8, .9  with 3 DIGITS for Bright normalize Coloured materials, If it's a gun or dark texture style just use current or .4, .5
+	"$blendtintbybasealpha" "0" // Enable this for env mask on base texture alpha. You can disable it if it's gun or dark texture style once again I said
+	"$phong" "1" // Important for material shading stuff
+	"$phongboost" "1" // The higher the model brighter, the lower has less shine,reflect and bright
+	"$phongalbedotint" "0" // Important for base texture effect. Disable it if has issue for env mask. REMEMBER, Make sure to adjust Phong setting to reduce since it determine if it's bright or low
+	"$PhongFresnelRanges" "[ .95 1 4 ]" // X, Y and Z numbers each surface handle for phong
+	"$envmap" "env_cubemap" // Defines an specular reflections
+	"$envmapfresnel" "1" // add gloss stiff effects. You can reduce it but don't set it higher
+	"$envmaptint" "[ .02 .02 .02]" // Controls Intensity for reflections. Play around with it
+	--"$rimlight" "1" // slight Lighting Exposer from environment
+	--"$rimlightexponent" "20" // Defines the broader and tightness of highlight, The smaller number is higher $rimlightboost effect, The highest number lower
+	--"$rimlightboost" "0.5" // play around the values high between low
+	--"$rimmask" "1" // Important if you add alpha channel from $phongexponenttexture
+                 --"Proxies"
+    --{
+        --"MwEnvMapTint"
+        --{
+            --"color"    "[0.325 0.225 0.0525]"
+            --"envmap"    "viper/shared/envmaps/painted_silver.hdr"
+            --"min" "1"
+            --"max" "1.5"
+        --}
+    --}
+--}
+
+
+
+// Fiddle around the settings and get the best result from your lucks
